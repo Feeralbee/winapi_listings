@@ -1,7 +1,3 @@
-#ifdef UNICODE
-#define UNICODE
-#endif
-
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <Windows.h>
@@ -40,9 +36,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM
 	return 0;
 }
 
-int WINAPI WinMain(HINSTANCE This, // Дескриптор текущего приложения
+int WINAPI wWinMain(HINSTANCE This, // Дескриптор текущего приложения
 	HINSTANCE, // В современных системах всегда 0
-	LPTSTR, // Командная строка
+	PWSTR, // Командная строка
 	int mode) // Режим отображения окна
 {
 	HWND hWnd; // Дескриптор главного окна программы

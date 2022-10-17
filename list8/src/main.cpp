@@ -1,7 +1,3 @@
-#ifdef UNICODE
-#define UNICODE
-#endif
-
 #define _USE_MATH_DEFINES
 
 #include <Windows.h>
@@ -59,7 +55,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
-int WINAPI WinMain(HINSTANCE This, // Дескриптор текущего приложения
+int WINAPI wWinMain(HINSTANCE This, // Дескриптор текущего приложения
 	HINSTANCE, // В современных системах всегда 0
 	LPTSTR, // Командная строка
 	int mode) // Режим отображения окна

@@ -1,7 +1,3 @@
-#ifdef UNICODE
-#define UNICODE
-#endif
-
 #define _CRT_SECURE_NO_WARNINGS
 
 
@@ -48,7 +44,7 @@ tm.tmAscent, tm.tmDescent);
 	return 0;
 }
 
-int WINAPI WinMain(HINSTANCE This, // Дескриптор текущего приложения
+int WINAPI wWinMain(HINSTANCE This, // Дескриптор текущего приложения
 	HINSTANCE, // В современных системах всегда 0
 	LPTSTR, // Командная строка
 	int mode) // Режим отображения окна

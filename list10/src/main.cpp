@@ -1,7 +1,3 @@
-#ifdef UNICODE
-#define UNICODE
-#endif
-
 #include <Windows.h>
 #include <tchar.h>
 
@@ -9,8 +5,8 @@
 TCHAR WinName[] = _T("MainFrame");
 
 HBRUSH hbrush, h_brush[6];
-LPCSTR str = _T("сплошное заполнение");
-LPCSTR hstr[] = { _T("HS_BDIAGONAL – слева направо и снизу вверх"),
+LPCWSTR str = _T("сплошное заполнение");
+LPCWSTR hstr[] = { _T("HS_BDIAGONAL – слева направо и снизу вверх"),
 _T("HS_CROSS - горизонтальная и вертикальная штриховка"),
 _T("HS_DIAGCROSS - под углом в 45 градусов"),
 _T("HS_FDIAGONAL - слева направо и сверху вниз"),
@@ -53,7 +49,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
-int WINAPI WinMain(HINSTANCE This, // Дескриптор текущего приложения
+int WINAPI wWinMain(HINSTANCE This, // Дескриптор текущего приложения
 	HINSTANCE, // В современных системах всегда 0
 	LPTSTR, // Командная строка
 	int mode) // Режим отображения окна
